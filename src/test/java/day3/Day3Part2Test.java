@@ -3,7 +3,6 @@ package day3;
 import org.junit.Test;
 
 import common.BaseTest;
-import day3.Day3Part1Test.Found;
 import functionalj.list.FuncList;
 import functionalj.stream.intstream.IntStreamPlus;
 
@@ -25,7 +24,7 @@ public class Day3Part2Test extends BaseTest {
     }
     
     long largestOf(int[] digits, int start, int wantDigits) {
-        if (wantDigits == 0)
+        if (wantDigits == 0)    
             return 0;
         
         var found = findLargestOf(digits, start, digits.length - (wantDigits - 1));
