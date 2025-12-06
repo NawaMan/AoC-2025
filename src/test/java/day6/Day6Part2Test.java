@@ -77,6 +77,7 @@ public class Day6Part2Test extends BaseTest {
                 .map      (theInt.plus(offset))
                 .mapToObj (index -> numberLines.map(theString.charAt(index)))
                 .mapToObj (chars -> chars.join().trim())
+                .exclude  (theString.thatIsEmpty())
                 .mapToLong(Long::parseLong)
                 .reduce   (operatorFunc)
                 .getAsLong();
